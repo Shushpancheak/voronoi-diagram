@@ -40,7 +40,7 @@ if __name__ == '__main__':
     world = World()
 
     # Initial random points. Two-dimensional array.
-    points = np.random.rand(100, 2) * const.POINTS_MODIFIER
+    points = np.random.rand(const.POINTS_NUMBER, 2) * const.POINTS_MODIFIER
 
     # Using voronoi diagram to make polygons around points.
     lines = voronoi.get_voronoi_polygons(points)
@@ -55,12 +55,12 @@ if __name__ == '__main__':
             if event.type == pygame.QUIT:
                 done = True
 
-        screen.fill(const.cBLACK)
+        screen.fill(const.BLACK)
 
         for point in points:
-            pygame.draw.circle(screen, const.cBLUE, point, 5, 5)
+            pygame.draw.circle(screen, const.BLUE, point, 5 * math.sin(), 5)
         for segment in lines:
-            pygame.draw.line(screen, const.cRED, segment[0], segment[1], 3)
+            pygame.draw.line(screen, const.RED, segment[0], segment[1], 3)
 
         pygame.display.flip()
 

@@ -5,7 +5,7 @@ import time
 import const
 
 
-def get_delanay_circles_centers(triangles):
+def get_circles_centers(triangles):
     """
     Takes an array of triangles in format where [[pt1], [pt2], [pt3]]
     is a triangle and returns an np.array of centers of circles
@@ -99,7 +99,7 @@ def get_voronoi_polygons(input_pts, bbox=None):
     triangles_count = triangles.shape[0]
 
     # input_pts[triangles] = array of triangles: [[pt1], ..., ...] -- triangle.
-    circle_centers = get_delanay_circles_centers(input_pts[triangles])
+    circle_centers = get_circles_centers(input_pts[triangles])
 
     segments = []
     for i in range(triangles_count):
