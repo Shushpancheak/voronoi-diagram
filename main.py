@@ -14,6 +14,7 @@ import logging
 import const
 import voronoi
 
+
 class World:
     def __init__(self, width=const.DEFAULT_WIDTH, height=const.DEFAULT_HEIGHT):
         pass
@@ -27,13 +28,13 @@ if __name__ == '__main__':
     # Used to manage how fast the screen updates
     clock = pygame.time.Clock()
 
-    logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s \
+                        - %(message)s',
                         level=logging.DEBUG)
     logger = logging.getLogger(__name__)
 
     # for displaying text in the game
-    pygame.font.init() # you have to call this at the start,
-                       # if you want to use this module.
+    pygame.font.init()
     screen = pygame.display.set_mode(const.DEFAULT_RESOLUTION)
     pygame.display.set_caption("TerraGen")
     world = World()

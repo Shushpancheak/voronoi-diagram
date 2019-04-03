@@ -8,11 +8,11 @@ DEFAULT_RENDER_HEIGHT = 720
 DEFAULT_RESOLUTION = (DEFAULT_RENDER_WIDTH, DEFAULT_RENDER_HEIGHT)
 
 # Colors
-cBLACK = (  0,   0,   0)
+cBLACK = (0, 0, 0)
 cWHITE = (255, 255, 255)
-cGREEN = (  0, 255,   0)
-cRED   = (255,   0,   0)
-cBLUE  = (  0,   0, 255)
+cGREEN = (0, 255, 0)
+cRED = (255, 0, 0)
+cBLUE = (0, 0, 255)
 
 
 # Voronoi-related
