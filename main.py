@@ -13,6 +13,7 @@ import pygame
 import logging
 import const
 import voronoi
+import math
 
 
 class World:
@@ -58,7 +59,7 @@ if __name__ == '__main__':
         screen.fill(const.BLACK)
 
         for point in points:
-            pygame.draw.circle(screen, const.BLUE, point, 5 * math.sin(), 5)
+            pygame.draw.circle(screen, const.BLUE, point, 5, 5)
         for segment in lines:
             pygame.draw.line(screen, const.RED, segment[0], segment[1], 3)
 
